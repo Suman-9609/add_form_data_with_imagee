@@ -1,0 +1,30 @@
+// Get the input element for the image file
+var input = document.getElementById('fileInput');
+
+// Create a new FormData object
+var formData = new FormData();
+
+// Add the image file to the FormData object
+formData.append('image', input.files[0]);
+
+// Send the FormData object to PHP using Ajax
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'upload.php', true);
+xhr.onload = function() {
+  if (this.status == 200) {
+    console.log(this.response);
+  }
+};
+xhr.send(formData);
+
+
+
+
+//============php============
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $image = $_FILES['image'];
+  // Do something with the image file
+}
+?>
+

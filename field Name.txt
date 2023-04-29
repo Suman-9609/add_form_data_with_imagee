@@ -1,0 +1,43 @@
+--------------------------
+Basic Information
+--------------------------
+School Code : school_code
+School Name : school_name
+Address : address
+Phone : phone
+Registration Date : registration_date
+Email : email   
+Fax : school_fax
+Footer : footer
+-------------------------
+Setting Information:
+-------------------------
+Currency : currency
+Currency Symbol : currency_symbol
+Enable Frontend : enable_frontend
+Exam final result : final_result_type
+Latitude : school_lat
+Longitude : school_lng
+Api Key [ Get Api Key] : map_api_key
+Language : language
+Theme : theme_name
+Online Admission : enable_online_admission
+Zoom Api Key : zoom_api_key
+Zoom Secret : zoom_secret
+Enable RTL : enable_rtl
+--------------------------
+Social Information:
+--------------------------
+Facebook URL : facebook_url
+Twitter URL : twitter_url
+Linkedin URL : linkedin_url
+Google Plus URL : google_plus_url
+Youtube URL : youtube_url
+Instagram URL : instagram_url
+Pinterest URL : pinterest_url
+-------------------------
+Other Information: : 
+-------------------------
+Frontend Logo : frontend_logo
+Admin Logo : logo
+

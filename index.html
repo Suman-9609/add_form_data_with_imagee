@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://planning.exelytic.com/assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="https://planning.exelytic.com/assets/css/custom.css" rel="stylesheet">
+
+    <link href="https://planning.exelytic.com/assets/css/theme/slate-gray.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://planning.exelytic.com/assets/js/jquery-1.11.2.min.js"></script>
+    <script src="https://planning.exelytic.com/assets/js/jquery.validate.js"></script>
+
+    <!-- <script type="text/javascript" src="https://planning.exelytic.com/assets/vendors/toastr/toastr.min.js"></script> -->
+    <style>
+        .panel {
+            padding: 5px 10px;
+        }
+
+        .statusMsg {
+            display: none;
+            text-align: center;
+            color: #162a83;
+            padding: 10px 0;
+            text-transform: capitalize;
+            background: rgba(231, 235, 249, 1);
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+
+
+
+<div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="x_panel">
+        <!-- <div class="x_title"> -->
+        <!-- <h3 class="head-title"><i class="fa fa-home"></i><small> Manage School</small></h3>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                </ul>
+                <div class="clearfix"></div> -->
+        <!-- </div> -->
+
+        <div class="x_content">
+            <div class="" data-example-id="togglable-tabs">
+
+                <div class="tab-content">
+
+
+                    <div class="tab-pane fade active in" id="tab_add_school">
+                        <!-- Status message -->
+                        <div class="statusMsg">This is success message </div>
+
+                        <div class="x_content panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <form action="" name="add" id="add" class="form-horizontal form-label-left"
+                                enctype="multipart/form-data" method="post" accept-charset="utf-8"
+                                novalidate="novalidate">
+                                <div class="panel panel-default">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <h5 class="column-title panel-heading" role="tab" id="headingOne">
+                                                <strong>Basic Information:</strong>
+
+                                                <a class="" data-toggle="collapse" data-parent="#accordion"
+                                                    href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                                    style="float: right;"><i class="fa fa-chevron-down"
+                                                        style="color:  #3498DB;"></i></a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="panel-collapse collapse in" id="collapseOne" role="tabpanel"
+                                        aria-labelledby="headingOne">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="school_code">School Code</label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="school_code"
+                                                        id="school_code" value="" placeholder="School Code " type="text"
+                                                        autocomplete="off" fdprocessedid="jvlpx">
+                                                    <!-- onchange="getSchoolName(this)" -->
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="school_name">School Name <span
+                                                            class="required">*</span></label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="school_name"
+                                                        id="school_name" value="" placeholder="School Name"
+                                                        required="required" type="text" autocomplete="off"
+                                                        fdprocessedid="h5rdma">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="address">Address <span class="required">*</span></label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="address"
+                                                        id="address" value="" placeholder="Address" required="required"
+                                                        type="text" autocomplete="off" fdprocessedid="rz4vdo">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="phone">Phone <span class="required">*</span></label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="phone"
+                                                        id="phone" value="" placeholder="Phone" required="required"
+                                                        type="text" autocomplete="off" fdprocessedid="ni3ytq">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="registration_date">Registration Date </label>
+                                                    <input class="form-control col-md-7 col-xs-12"
+                                                        name="registration_date" id="add_registration_date" value=""
+                                                        placeholder="Registration Date" type="text" autocomplete="off"
+                                                        fdprocessedid="easw89">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="email">Email <span class="required">*</span></label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="email"
+                                                        id="email" value="" placeholder="Email " required="required"
+                                                        type="email" autocomplete="off" fdprocessedid="l5e4a">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="school_fax">Fax </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="school_fax"
+                                                        id="school_fax" value="" placeholder="Fax " type="text"
+                                                        autocomplete="off" fdprocessedid="spw3iq">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="footer">Footer </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="footer"
+                                                        id="footer" value="" placeholder="Footer " type="text"
+                                                        autocomplete="off" fdprocessedid="zxwk2m">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel end -->
+
+                                <!-- start panel -->
+                                <div class="panel panel-default">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <h5 class="column-title panel-heading" role="tab" id="headingTwo">
+                                                <strong>Setting Information:</strong>
+
+                                                <a class="" data-toggle="collapse" data-parent="#accordion"
+                                                    href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"
+                                                    style="float: right;"><i class="fa fa-chevron-down"
+                                                        style="color:  #3498DB;"></i></a>
+                                            </h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-collapse collapse in" id="collapseTwo" role="tabpanel"
+                                        aria-labelledby="headingTwo">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="currency">Currency</label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="currency"
+                                                        id="currency" value="" placeholder="Currency" type="text"
+                                                        autocomplete="off" fdprocessedid="1kdmdd">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="currency_symbol">Currency Symbol <span
+                                                            class="required">*</span></label>
+                                                    <input class="form-control col-md-7 col-xs-12"
+                                                        name="currency_symbol" id="currency_symbol" value=""
+                                                        placeholder="Currency Symbol " required="required" type="text"
+                                                        autocomplete="off" fdprocessedid="yo8kul">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="enable_frontend">Enable Frontend <span
+                                                            class="required">*</span></label>
+                                                    <select class="form-control col-md-7 col-xs-12"
+                                                        name="enable_frontend" required="required"
+                                                        fdprocessedid="ui3xn">
+                                                        <option value="1">Yes</option>
+                                                        <option value="0">No</option>
+                                                    </select>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="final_result_type">Exam final result <span
+                                                            class="required">*</span></label>
+                                                    <select class="form-control col-md-7 col-xs-12"
+                                                        name="final_result_type" required="required"
+                                                        fdprocessedid="uei4q">
+                                                        <option value="0">Average of All Exam </option>
+                                                        <option value="1">Only Based on Final Exam </option>
+                                                    </select>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="school_lat">Latitude </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="school_lat"
+                                                        id="school_lat" value="" placeholder="Latitude " type="text"
+                                                        autocomplete="off" fdprocessedid="9e742i">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="school_lng">Longitude </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="school_lng"
+                                                        id="school_lng" value="" placeholder="Longitude " type="text"
+                                                        autocomplete="off" fdprocessedid="c13los">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="map_api_key">
+                                                        Api Key
+                                                        [ <a target="_blank"
+                                                            href="https://developers.google.com/maps/documentation/embed/get-api-key">Get
+                                                            Api Key</a>]
+                                                    </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="map_api_key"
+                                                        id="map_api_key" value="" placeholder="Api Key " type="text"
+                                                        autocomplete="off" fdprocessedid="bnpz5n">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="language">Language <span
+                                                            class="required">*</span></label>
+                                                    <select class="form-control col-md-7 col-xs-12" name="language"
+                                                        required="required" fdprocessedid="dlafcn">
+                                                        <option value="">--Select--</option>
+                                                        <option value="english">English</option>
+                                                        <option value="bengali">Bengali</option>
+                                                        <option value="spanish">Spanish</option>
+                                                        <option value="arabic">Arabic</option>
+                                                        <option value="hindi">Hindi</option>
+                                                        <option value="urdu">Urdu</option>
+                                                        <option value="chinese">Chinese</option>
+                                                        <option value="japanese">Japanese</option>
+                                                        <option value="portuguese">Portuguese</option>
+                                                        <option value="russian">Russian</option>
+                                                        <option value="french">French</option>
+                                                        <option value="korean">Korean</option>
+                                                        <option value="german">German</option>
+                                                        <option value="italian">Italian</option>
+                                                        <option value="thai">Thai</option>
+                                                        <option value="hungarian">Hungarian</option>
+                                                        <option value="dutch">Dutch</option>
+                                                        <option value="latin">Latin</option>
+                                                        <option value="indonesian">Indonesian</option>
+                                                        <option value="turkish">Turkish</option>
+                                                        <option value="greek">Greek</option>
+                                                        <option value="persian">Persian</option>
+                                                        <option value="malay">Malay</option>
+                                                        <option value="telugu">Telugu</option>
+                                                        <option value="tamil">Tamil</option>
+                                                        <option value="gujarati">Gujarati</option>
+                                                        <option value="polish">Polish</option>
+                                                        <option value="ukrainian">Ukrainian</option>
+                                                        <option value="panjabi">Panjabi</option>
+                                                        <option value="romanian">Romanian</option>
+                                                        <option value="burmese">Burmese</option>
+                                                        <option value="yoruba">Yoruba</option>
+                                                        <option value="hausa">Hausa</option>
+                                                        <option value="mylang">Mylang</option>
+                                                    </select>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="theme_name">Theme <span
+                                                            class="required">*</span></label>
+                                                    <select class="form-control col-md-7 col-xs-12" name="theme_name"
+                                                        required="required" fdprocessedid="dwcotc">
+                                                        <option value="">--Select--</option>
+                                                        <option style="color: #FFF;background-color: #9F134E;"
+                                                            value="jazzberry-jam">Jazzberry Jam </option>
+                                                        <option style="color: #FFF;background-color: #23282d;"
+                                                            value="black">Black </option>
+                                                        <option style="color: #FFF;background-color: #745D0B;"
+                                                            value="umber">Umber </option>
+                                                        <option style="color: #FFF;background-color: #9370DB;"
+                                                            value="medium-purple">MediumPurple </option>
+                                                        <option style="color: #FFF;background-color: #32CD32;"
+                                                            value="lime-green">LimeGreen </option>
+                                                        <option style="color: #FFF;background-color: #663399;"
+                                                            value="rebecca-purple">RebeccaPurple </option>
+                                                        <option style="color: #FFF;background-color: #FB2E50;"
+                                                            value="radical-red">Radical Red </option>
+                                                        <option style="color: #FFF;background-color: #1E90FF;"
+                                                            value="dodger-blue">DodgerBlue </option>
+                                                        <option style="color: #FFF;background-color: #800000;"
+                                                            value="maroon">Maroon </option>
+                                                        <option style="color: #FFF;background-color: #FF8C00;"
+                                                            value="dark-orange">DarkOrange </option>
+                                                        <option style="color: #FFF;background-color: #FF1493;"
+                                                            value="deep-pink">DeepPink </option>
+                                                        <option style="color: #FFF;background-color: #CC4F26;"
+                                                            value="trinidad">Trinidad </option>
+                                                        <option style="color: #FFF;background-color: #2A3F54;"
+                                                            value="slate-gray">SlateGray </option>
+                                                        <option style="color: #FFF;background-color: #20B2AA;"
+                                                            value="light-sea-green">LightSeaGreen </option>
+                                                        <option style="color: #FFF;background-color: #001f67;"
+                                                            value="navy-blue">Navy Blue </option>
+                                                        <option style="color: #FFF;background-color: #e80000;"
+                                                            value="red">
+                                                            Red </option>
+                                                    </select>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="enable_online_admission">Online Admission <span
+                                                            class="required">*</span></label>
+                                                    <select class="form-control col-md-7 col-xs-12"
+                                                        name="enable_online_admission" id="enable_online_admission"
+                                                        required="required" fdprocessedid="vq2yig">
+                                                        <option value="">--Select--</option>
+                                                        <option value="0">No</option>
+                                                        <option value="1">Yes</option>
+                                                    </select>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="zoom_api_key">Zoom Api Key </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="zoom_api_key"
+                                                        id="zoom_api_key" value="" placeholder="Zoom Api Key "
+                                                        type="text" autocomplete="off" fdprocessedid="bm86za">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="zoom_secret">Zoom Secret </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="zoom_secret"
+                                                        id="zoom_secret" value="" placeholder="Zoom Secret " type="text"
+                                                        autocomplete="off" fdprocessedid="te22as">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="enable_rtl">Enable RTL </label>
+                                                    <select class="form-control col-md-7 col-xs-12" name="enable_rtl"
+                                                        required="required" fdprocessedid="oztrhb">
+                                                        <option value="0">No</option>
+                                                        <option value="1">Yes</option>
+                                                    </select>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel end -->
+
+                                <!-- start panel -->
+                                <div class="panel panel-default">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <h5 class="column-title panel-heading" role="tab" id="headingThree">
+                                                <strong>Social Information:</strong>
+
+                                                <a class="" data-toggle="collapse" data-parent="#accordion"
+                                                    href="#collapseThree" aria-expanded="true"
+                                                    aria-controls="collapseThree" style="float: right;"><i
+                                                        class="fa fa-chevron-down" style="color:  #3498DB;"></i></a>
+                                            </h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-collapse collapse in" id="collapseThree" role="tabpanel"
+                                        aria-labelledby="headingThree">
+
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="facebook_url">Facebook URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="facebook_url"
+                                                        id="facebook_url" value="" placeholder="Facebook URL "
+                                                        type="text" autocomplete="off" fdprocessedid="yucc8o">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="twitter_url">Twitter URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="twitter_url"
+                                                        id="twitter_url" value="" placeholder="Twitter URL " type="text"
+                                                        autocomplete="off" fdprocessedid="elu4h9">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="linkedin_url">Linkedin URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="linkedin_url"
+                                                        id="linkedin_url" value="" placeholder="Linkedin URL "
+                                                        type="text" autocomplete="off" fdprocessedid="74ldxq">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="google_plus_url">Google Plus URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12"
+                                                        name="google_plus_url" id="google_plus_url" value=""
+                                                        placeholder="Google Plus URL " type="text" autocomplete="off"
+                                                        fdprocessedid="yf33uh">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="youtube_url">Youtube URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="youtube_url"
+                                                        id="youtube_url" value="" placeholder="Youtube URL " type="text"
+                                                        autocomplete="off" fdprocessedid="b5tvgz">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="instagram_url">Instagram URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="instagram_url"
+                                                        id="instagram_url" value="" placeholder="Instagram URL "
+                                                        type="text" autocomplete="off" fdprocessedid="89cudb">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="pinterest_url">Pinterest URL </label>
+                                                    <input class="form-control col-md-7 col-xs-12" name="pinterest_url"
+                                                        id="pinterest_url" value="" placeholder="Pinterest URL "
+                                                        type="text" autocomplete="off" fdprocessedid="me9mh">
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel end -->
+
+                                <!-- start panel -->
+                                <div class="panel panel-default">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <h5 class="column-title panel-heading" role="tab" id="headingFour">
+                                                <strong>Other Information:</strong>
+                                                <a class="" data-toggle="collapse" data-parent="#accordion"
+                                                    href="#collapseFour" aria-expanded="true"
+                                                    aria-controls="collapseFour" style="float: right;"><i
+                                                        class="fa fa-chevron-down" style="color:  #3498DB;"></i></a>
+
+                                            </h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-collapse collapse in" id="collapseFour" role="tabpanel"
+                                        aria-labelledby="headingFour">
+
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="logo">Frontend Logo </label>
+                                                    <div class="btn btn-default btn-file"><i
+                                                            class="fa fa-paperclip"></i>
+                                                        Upload <input class="form-control col-md-7 col-xs-12"
+                                                            name="frontend_logo" id="frontend_logo" type="file">
+                                                    </div>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="item form-group">
+                                                    <label for="logo">Admin Logo </label>
+                                                    <div class="btn btn-default btn-file"><i
+                                                            class="fa fa-paperclip"></i>
+                                                        Upload <input class="form-control col-md-7 col-xs-12"
+                                                            name="logo" id="logo" type="file">
+                                                    </div>
+                                                    <div class="help-block"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel end -->
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-3 text-center">
+                                        <a href="" class="btn btn-primary">Cancel</a>
+                                        <button id="send" type="submit" class="btn btn-success submitBtn"
+                                            fdprocessedid="5jjz0b">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FORM END  -->
+
+
+
+
+
+
+<link href="https://planning.exelytic.com/assets/vendors/datepicker/datepicker.css" rel="stylesheet">
+<script src="https://planning.exelytic.com/assets/vendors/datepicker/datepicker.js"></script>
+
+
+<script type="text/javascript">
+
+    $('#add_registration_date').datepicker({
+        dateFormat: "mm/dd/yy",
+        orientation: "top" // add this for placemenet
+    });
+
+    $('#edit_registration_date').datepicker();
+
+
+    $(document).ready(function () {
+
+        $('#school_code').change(function () {
+            let id = $('#school_code').val();
+            // alert(id);
+
+            if (id != '') {
+                $.ajax({
+                    url: 'schoolData.php',
+                    method: "GET",
+                    data: { id: id },
+                    dataType: "JSON",
+                    success: function (RES) {
+                        $('#school_name').val(RES);
+                    }
+                })
+                
+            }
+            else {
+                alert("Please type valid school code");
+            }
+        });
+
+
+
+
+
+        $("#add").on('submit', function (e) {
+            e.preventDefault();
+            console.log("submit clicked...");
+
+            $.ajax({
+                url: 'submit.php',
+                method: "POST",
+                data: new FormData(this),
+                dataType: 'json',
+                contentType: false,
+                cache: false,
+                processData: false,
+
+                success: function (response) {
+                    $(".statusMsg").css("display","block");
+
+                    if(response.status == 1) {
+                        console.log("succesfully upload");
+                        $("#add")[0].reset();
+                        $('.statusMsg').html('<p>'+response.message+'</p>');
+                        $(".statusMsg").css("color","green");
+                        // $(".statusMsg").fadeOut(5000);
+                    } else {
+                        $(".statusMsg").css("display","block");
+                        $(".statusMsg").css("color","red");
+                        $('.statusMsg').html('<p>'+response.message+'</p>');
+                        // $(".statusMsg").fadeOut(5000);
+                    }
+                }
+            })
+
+        })
+    });
+
+    $("#add").validate();
+    $("#edit").validate();
+</script>
+
+
+<script>
+
+    // frontend Logo  File type validation
+    $("#frontend_logo").change(function () {
+        var file = this.files[0];
+        var fileType = file.type;
+        var match = ['application/pdf', 'application/msword', 'application/vnd.ms-office','image/jpeg', 'image/png', 'image/jpg']; //
+        if (!((fileType == match[0]) || (fileType == match[1]) || (fileType == match[2]) || (fileType == match[3]) || (fileType == match[4]) || (fileType == match[5]))) { //
+            alert('Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.');
+            $("#file").val('');
+            return false;
+        }
+    });
+
+    // frontend Logo  File type validation
+    $("#logo").change(function () {
+        var file = this.files[0];
+        var fileType = file.type;
+        var match = ['application/pdf', 'application/msword', 'application/vnd.ms-office','image/jpeg', 'image/png', 'image/jpg']; //
+        if (!((fileType == match[0]) || (fileType == match[1]) || (fileType == match[2]) || (fileType == match[3]) || (fileType == match[4]) || (fileType == match[5]))) { //
+            alert('Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.');
+            $("#file").val('');
+            return false;
+        }
+    });
+
+
+</script>
+
+
+<!-- Bootstrap -->
+<script src="https://planning.exelytic.com/assets/vendors/bootstrap/bootstrap.min.js"></script>
+
+<!-- dataTable with buttons end -->
+<link href="https://planning.exelytic.com/assets/vendors/toastr/toastr.min.css" rel="stylesheet">
+
+<!-- Custom Theme Scripts -->
+<script src="https://planning.exelytic.com/assets/js/custom.js"></script>
+
+
+</body>
+
+
+</html>
