@@ -110,7 +110,7 @@ if (
                         $uploadedFile = $fileName;
                         $uploadStatus = 1;
                         $response['status'] = 1;
-                        $response['message'] = 'image successfully send to php.';
+                        $response['message'] = 'image successfully uploaded.';
                     } else {
                         $uploadStatus = 0;
                         $response['status'] = 0;
@@ -128,14 +128,7 @@ if (
                     //         $response['message'] ="Sorry! file Sise is too many large"; 
                     //     } else {
                     //         //  Upload file to the server
-                    //         if (move_uploaded_file($_FILES["frontend_logo"]["tmp_name"], $targetFilePath)) {
-                    //             $uploadedFile = $fileName;
-                    //             $uploadStatus = 1;
-                    //         } else {
 
-                    //             $response['message'] = "Sorry! an error occured";
-                    //             $uploadStatus = 0;
-                    //         }
                     //     }
                     // }
 

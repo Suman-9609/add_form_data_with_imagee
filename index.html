@@ -599,7 +599,7 @@
 
         $('#school_code').change(function () {
             let id = $('#school_code').val();
-            // alert(id);
+            console.log(id);
 
             if (id != '') {
                 $.ajax({
@@ -608,10 +608,19 @@
                     data: { id: id },
                     dataType: "JSON",
                     success: function (RES) {
-                        $('#school_name').val(RES);
-                    }
+                        $('#school_name').val(JSON.parse(RES).data.result.schoolName);
+                        // console.log(typeof RES);
+                        console.log(JSON.parse(RES).data.result.schoolName);
+
+                    },
+                    error: function (xhr, status, text) {
+                        var response = $.parseJSON(xhr.responseText);
+
+                        console.log(response);
+
+                   }
                 })
-                
+
             }
             else {
                 alert("Please type valid school code");
@@ -636,18 +645,18 @@
                 processData: false,
 
                 success: function (response) {
-                    $(".statusMsg").css("display","block");
+                    $(".statusMsg").css("display", "block");
 
-                    if(response.status == 1) {
+                    if (response.status == 1) {
                         console.log("succesfully upload");
                         $("#add")[0].reset();
-                        $('.statusMsg').html('<p>'+response.message+'</p>');
-                        $(".statusMsg").css("color","green");
+                        $('.statusMsg').html('<p>' + response.message + '</p>');
+                        $(".statusMsg").css("color", "green");
                         // $(".statusMsg").fadeOut(5000);
                     } else {
-                        $(".statusMsg").css("display","block");
-                        $(".statusMsg").css("color","red");
-                        $('.statusMsg').html('<p>'+response.message+'</p>');
+                        $(".statusMsg").css("display", "block");
+                        $(".statusMsg").css("color", "red");
+                        $('.statusMsg').html('<p>' + response.message + '</p>');
                         // $(".statusMsg").fadeOut(5000);
                     }
                 }
@@ -667,7 +676,7 @@
     $("#frontend_logo").change(function () {
         var file = this.files[0];
         var fileType = file.type;
-        var match = ['application/pdf', 'application/msword', 'application/vnd.ms-office','image/jpeg', 'image/png', 'image/jpg']; //
+        var match = ['application/pdf', 'application/msword', 'application/vnd.ms-office', 'image/jpeg', 'image/png', 'image/jpg']; //
         if (!((fileType == match[0]) || (fileType == match[1]) || (fileType == match[2]) || (fileType == match[3]) || (fileType == match[4]) || (fileType == match[5]))) { //
             alert('Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.');
             $("#file").val('');
@@ -679,7 +688,7 @@
     $("#logo").change(function () {
         var file = this.files[0];
         var fileType = file.type;
-        var match = ['application/pdf', 'application/msword', 'application/vnd.ms-office','image/jpeg', 'image/png', 'image/jpg']; //
+        var match = ['application/pdf', 'application/msword', 'application/vnd.ms-office', 'image/jpeg', 'image/png', 'image/jpg']; //
         if (!((fileType == match[0]) || (fileType == match[1]) || (fileType == match[2]) || (fileType == match[3]) || (fileType == match[4]) || (fileType == match[5]))) { //
             alert('Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.');
             $("#file").val('');

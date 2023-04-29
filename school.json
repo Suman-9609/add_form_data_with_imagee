@@ -1,9 +1,4 @@
-<?php
-
-// $jsonurl='http://website.com/international.json'; 
-  
-  $json = '
-  {
+{
     "apiId": "1111",
     "apiName": "School Master",
     "apiVersion": "1.0",
@@ -37,12 +32,4 @@
     },
     "statusCode": 200,
     "statusMessage": "Successful"
-}'  ;
-
-  $json_output = json_encode($json); 
-  echo $json_output;
-
-
-?>
-
-   
+}		
